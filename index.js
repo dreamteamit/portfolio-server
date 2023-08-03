@@ -5,29 +5,23 @@ const cors = require("cors");
 const dotenv = require("dotenv").config();
 const connectDB = require("./server");
 
-
 // const DetailsRoutes = require('import from route');
 
 app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-    res.send("Dream Team It Portfolio Server Working");
+  res.send("Dream Team It Portfolio Server Working");
 });
 
-
 // app.use('/routes_name', DetailsRoutes);
-
-
 
 connectDB();
 
 const port = process.env.PORT || 8080;
 
 app.listen(port, () => {
-    console.log(`App is running on port ${port}`);
+  console.log(`Portfolio App is running on port ${port}`);
 });
-
-
 
 // index.js -> routes -> controllers -> services -> models.
